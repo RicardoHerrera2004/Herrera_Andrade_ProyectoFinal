@@ -54,7 +54,20 @@ void factura(int resultado, int antivirus, int limpieza, int software, int disco
     contador++;
 }
 
-
+void imprimir_factura()
+{
+    char direccion[] = "Facturas.txt";
+    archivo = fopen(direccion, "r");
+    if (archivo == NULL){
+        printf("Error al ingresar en el archivo\n");
+    }
+    else {
+        char ch;
+        while((ch = fgetc(archivo)) != EOF)
+            putchar(ch);
+        fclose(archivo);
+    }
+}
 
 int main () {
 
