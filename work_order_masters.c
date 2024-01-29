@@ -18,6 +18,41 @@ int sumar(int x, int y, int z, int a)
     return resultado;
 }
 
+void factura(int resultado, int antivirus, int limpieza, int software, int disco_duro)
+{
+    char direccion[] = "Facturas.txt";
+    archivo = fopen(direccion, "a");
+    if (archivo == NULL){
+        printf("Error al ingresar en el archivo\n");
+    }
+    static int contador = 1;
+
+    printf("Ingrese su cedula: ");
+    scanf("%d", &usuario[contador].cedula);
+    getchar(); // Para consumir el '\n' dejado por scanf
+
+    printf("Ingrse su nombre: ");
+    fgets(usuario[contador].nombre, 40, stdin); // Usar fgets en lugar de gets
+    usuario[contador].nombre[strcspn(usuario[contador].nombre, "\n")] = 0; // Para eliminar el '\n' al final
+
+    usuario[contador].total = resultado;
+
+    time_t t = time(NULL);
+    struct tm tm = *localtime(&t);
+    fprintf(archivo, "--Usuario %d--\n", contador);
+    fprintf(archivo, "Fecha: %02d-%02d-%04d\n", tm.tm_mday, tm.tm_mon + 1, tm.tm_year + 1900);
+    fprintf(archivo, "Cedula: %d\n", usuario[contador].cedula);
+    fprintf(archivo, "Nombre: %s\n", usuario[contador].nombre);
+    fprintf(archivo, "Precio total: %d\n", usuario[contador].total);
+    fprintf(archivo, "DETALLE DEL DIAGNOSTICO\n");
+    fprintf(archivo, "Antivirus: %d\n", antivirus);
+    fprintf(archivo, "Limpieza: %d\n", limpieza);
+    fprintf(archivo, "Software: %d\n", software);
+    fprintf(archivo, "Disco duro: %d\n", disco_duro);
+
+    fclose(archivo);
+    contador++;
+}
 
 
 
