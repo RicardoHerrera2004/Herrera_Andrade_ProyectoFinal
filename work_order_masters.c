@@ -90,7 +90,7 @@ int main() // Funcion principal del programa
         printf("\t--------Selecciona la opcion que deseas--------\n");
         printf("Ingrese-1-para hacer un diagnostico\n");
         printf("Ingrese-2-para cotizar el mantenimiento de su computador\n");
-        printf("Ingrese-3-para imprimir la factura\n");
+        printf("Ingrese-3-para emitir la factura\n");
         printf("Ingrese-4-para imprimir todas las facturas guardadas\n");
         printf("Ingrese-5-para salir\n");
         scanf("%d", &boton1); // Lee la opcion del usuario
@@ -105,7 +105,6 @@ int main() // Funcion principal del programa
 
             // Cotizacion del antivirus
             int r_a = rand() % 2 + 1; // Generar un número aleatorio entre 1 y 2
-            printf("%d\n", r_a);      // Imprimir el número aleatorio
             if (r_a == 1)
             { // Si el número aleatorio es 1
                 printf("Su computadora necesita un nuevo antivirus\n");
@@ -118,7 +117,6 @@ int main() // Funcion principal del programa
             }
             // Cotizacion de la limpieza interna de la computadora
             int r_l = rand() % 5 + 1; // Generar un número aleatorio entre 1 y 5
-            printf("%d\n", r_l);
             if (r_l == 1)
             {
                 printf("Su computadora necesita una limpieza interna completa\n");
@@ -146,7 +144,7 @@ int main() // Funcion principal del programa
             }
             // Cotizacion de la instalacion y actualizacion de un nuevo sistema operativo
             int r_s = rand() % 3 + 1;
-            printf("%d\n", r_s);
+
             if (r_s == 1)
             {
                 printf("Su computadora necesita instalar un nuevo sistema operativo\n");
@@ -165,7 +163,7 @@ int main() // Funcion principal del programa
 
             // Cotizacion de un reinicio del disco duro
             int r_d = rand() % 2 + 1;
-            printf("%d\n", r_d);
+
             if (r_d == 1)
             {
                 printf("Su computadora necesita un reinicio del disco duro\n");
