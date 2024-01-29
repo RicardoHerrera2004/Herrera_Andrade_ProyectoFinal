@@ -36,6 +36,70 @@ int main () {
         case 1:
             printf("Bienvenido al diagnosticador de su pc\n");
 
+            // Cotizacion del antivirus
+            int r_a = rand() % 2 + 1;
+            printf("%d\n", r_a);
+            if (r_a == 1){
+                printf("Su computadora necesita un nuevo antivirus\n");
+                antivirus = 30;
+            }
+            else if (r_a == 2){
+                printf("Su computadora no necesita un nuevo antivirus\n");
+                antivirus = 0;
+            }
+
+            // Cotizacion de la limpieza interna de la computadora
+            int r_l = rand() % 5 + 1;
+            printf("%d\n", r_l);
+            if (r_l == 1){
+                printf("Su computadora necesita una limpieza interna completa\n");
+                limpieza = 125;
+            }
+            else if (r_l == 2){
+                printf("Su computadora necesita una limpieza interna avanzada\n");
+                limpieza = 100;
+            }
+            else if (r_l == 3){
+                printf("Su computadora necesita una limpieza interna estandar\n");
+                limpieza = 75;
+            }
+            else if (r_l == 4){
+                printf("Su computadora necesita una limpieza interna basica\n");
+                limpieza = 50;
+            }
+            else if (r_l == 5){
+                printf("Su computadora no necesita ninguna limpieza interna\n");
+                limpieza = 0;
+            }
+
+            // Cotizacion de la instalacion y actualizacion de un nuevo sistema operativo
+            int r_s = rand() % 3 + 1;
+            printf("%d\n", r_s);
+            if (r_s == 1){
+                printf("Su computadora necesita instalar un nuevo sistema operativo\n");
+                software = 30;
+            }
+            else if (r_a == 2){
+                printf("Su computadora necesita actualizar su sistema operativo\n");
+                software = 25;
+            }
+            else if (r_s == 3){
+                printf("Su computadora no necesita ninguna software\n");
+                software = 0;
+            }
+
+            // Cotizacion de un reinicio del disco duro
+            int r_d = rand() % 2 + 1;
+            printf("%d\n", r_d);
+            if (r_d == 1){
+                printf("Su computadora necesita un reinicio del disco duro\n");
+                disco_duro = 60;
+            }
+            else if (r_d == 2){
+                printf("Su computadora no necesita un reinicio del disco duro\n");
+                disco_duro = 0;
+            }
+
             break;
 
         case 2:
