@@ -5,6 +5,12 @@
 
 FILE *archivo;
 
+struct costos
+{
+    char nombre[40];
+    int cedula;
+    int total;
+} usuario[];
 
 
 
