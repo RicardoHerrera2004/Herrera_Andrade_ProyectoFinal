@@ -12,6 +12,12 @@ struct costos
     int total;
 } usuario[];
 
+int sumar(int x, int y, int z, int a)
+{
+    int resultado = x + y + z + a;
+    return resultado;
+}
+
 
 
 
